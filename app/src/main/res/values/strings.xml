@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">To do List</string>
+    <string name="label_tarefas">Tarefas</string>
+    <string name="label_button">Adiciona uma tarefa</string>
 </resources>
