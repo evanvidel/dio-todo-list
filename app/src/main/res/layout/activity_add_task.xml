@@ -52,6 +52,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/label_date"
+        app:startIconDrawable="@drawable/ic_calendar"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toBottomOf="@id/til_title"
         app:layout_constraintEnd_toStartOf="@id/til_hour"
@@ -83,6 +84,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
         android:layout_width="0dp"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:text="@string/label_cancel"
