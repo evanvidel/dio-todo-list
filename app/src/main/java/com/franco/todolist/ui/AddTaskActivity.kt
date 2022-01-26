@@ -22,6 +22,15 @@ class AddTaskActivity : AppCompatActivity() {
         binding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (intent.hasExtra(TASK_ID)){
+            val taskId = intent.getIntExtra(TASK_ID,0)
+            TaskDataSource.findById(taskId)?.let {
+                binding.tilTitle.text =  it.title
+                binding.tilDate.text =  it.date
+                binding.tilHour.text =  it.hour
+            }
+        }
+
         insertListener()
     }
 

@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_empty_state.xml" value="0.34739583333333335" />
         <entry key="app/src/main/res/layout/activity_add_task.xml" value="0.33125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/empty_state.xml" value="0.33125" />
         <entry key="app/src/main/res/layout/item_task.xml" value="0.33125" />
         <entry key="app/src/main/res/menu/popup_menu.xml" value="0.33125" />
       </map>
