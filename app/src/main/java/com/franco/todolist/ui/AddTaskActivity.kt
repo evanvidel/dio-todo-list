@@ -1,7 +1,7 @@
 package com.franco.todolist.ui
 
+import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.franco.todolist.databinding.ActivityAddTaskBinding
 import com.franco.todolist.datasource.TaskDataSource
@@ -54,11 +54,16 @@ class AddTaskActivity : AppCompatActivity() {
             val task = Task(
                 title = binding.tilTitle.text,
                 date = binding.tilDate.text,
-                hour = binding.tilHour.text
-
+                hour = binding.tilHour.text,
+                id = intent.getIntExtra(TASK_ID,0)
             )
             TaskDataSource.insertTask(task)
-            Log.i("TAG", "insertListener: " + TaskDataSource.getList())
+
+            setResult(Activity.RESULT_OK)
+            finish()
         }
+    }
+    companion object {
+        const val TASK_ID = "task_id"
     }
 }

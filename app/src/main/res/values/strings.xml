@@ -7,4 +7,8 @@
     <string name="label_date">Data</string>
     <string name="label_hour">Hora</string>
     <string name="label_cancel">Cancelar</string>
+    <string name="label_edit">Editar</string>
+    <string name="label_deletar">Deletar</string>
+    <string name="label_date_now">01/01/2021 18:00</string>
+    <string name="label_tarefas">Passear com o cachorro</string>
 </resources>

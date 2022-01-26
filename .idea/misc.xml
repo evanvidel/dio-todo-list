@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_add_task.xml" value="0.33125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/item_task.xml" value="0.33125" />
+        <entry key="app/src/main/res/menu/popup_menu.xml" value="0.33125" />
       </map>
     </option>
   </component>
