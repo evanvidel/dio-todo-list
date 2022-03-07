@@ -1,16 +1,21 @@
 package com.franco.todolist.ui
 
 import android.app.Activity
+import android.app.ProgressDialog.show
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isEmpty
 import com.franco.todolist.databinding.ActivityAddTaskBinding
 import com.franco.todolist.datasource.TaskDataSource
 import com.franco.todolist.extensions.format
 import com.franco.todolist.extensions.text
 import com.franco.todolist.model.Task
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
+import com.sdsmdg.tastytoast.TastyToast
 import java.util.*
 
 class AddTaskActivity : AppCompatActivity() {
@@ -22,12 +27,15 @@ class AddTaskActivity : AppCompatActivity() {
         binding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         if (intent.hasExtra(TASK_ID)){
+
             val taskId = intent.getIntExtra(TASK_ID,0)
             TaskDataSource.findById(taskId)?.let {
                 binding.tilTitle.text =  it.title
                 binding.tilDate.text =  it.date
                 binding.tilHour.text =  it.hour
+
             }
         }
 
@@ -57,6 +65,7 @@ class AddTaskActivity : AppCompatActivity() {
             timerPicker.show(supportFragmentManager, null)
         }
         binding.btnCancel.setOnClickListener {
+
             finish()
         }
         binding.btnNewTask.setOnClickListener {
@@ -66,6 +75,8 @@ class AddTaskActivity : AppCompatActivity() {
                 hour = binding.tilHour.text,
                 id = intent.getIntExtra(TASK_ID,0)
             )
+
+
             TaskDataSource.insertTask(task)
 
             setResult(Activity.RESULT_OK)

@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.franco.todolist.databinding.ActivityMainBinding
 import com.franco.todolist.datasource.TaskDataSource
+import com.sdsmdg.tastytoast.TastyToast
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,8 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvTasks.adapter = adapter
         updateList()
         insertListener()
-        //DATA STORE
-        //ROOM
+
     }
 
     private fun insertListener() {
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) updateList()
+
 
     }
 

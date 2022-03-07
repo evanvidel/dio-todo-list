@@ -90,6 +90,7 @@
         android:text="@string/label_cancel"
         android:textAllCaps="false"
         android:layout_height="wrap_content"
+        android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@id/btn_new_task"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintEnd_toEndOf="@id/guide_end"/>
@@ -101,6 +102,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:padding="15dp"
         android:text="@string/label_new_task"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
