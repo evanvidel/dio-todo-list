@@ -12,7 +12,7 @@ object TaskDataSource {
         if (task.id == 0) {
             list.add(task.copy(id = list.size + 1))
         } else {
-            list.remove(task)
+            list.remove(findById(task.id))
             list.add(task)
         }
     }
